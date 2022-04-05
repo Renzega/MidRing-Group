@@ -1,2 +1,2 @@
 # MidRing Group
- +Nouvelle section
+  Bienvenue sur les projets de l'agence MidRing !
