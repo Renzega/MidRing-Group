@@ -16,7 +16,7 @@ if(isset($_GET['p']) && is_string($_GET['p']) && in_array($_GET['p'], $pages)) {
 } else { // Au moins une des conditions ci-dessus n'est pas respectée
 
     // On redirige l'utilisateur vers la page d'erreur 404, en précisant le nom de la page recherchée
-    header('Location: index.php?p=erreur404&page='.$currentPage)
+    header('Location: index.php?p=erreur404&page='.$currentPage);
 
 }
 
