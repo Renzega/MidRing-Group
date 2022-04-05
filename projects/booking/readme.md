@@ -13,4 +13,5 @@
 
 ## Arborescence du projet
 Voici une représentation structurelle de l'arborescence du projet. Les listes à l'intérieur des rectangles noirs sont, pour la plupart, non-exhaustives :
+
 ![Alt text](structure.png)
