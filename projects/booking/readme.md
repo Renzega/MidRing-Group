@@ -1,1 +1,2 @@
 # Booking
+** MidRing Agency ** a été mandatée pour la conception, le développement et la réalisation d'un projet "prototype" portant sur un système de gestion et réservation de chambres d'hôtel. Ce projet est destiné à un particulier qui ne souhaite pas intégrer de réels systèmes de paiement automatisés, mais simplement un prototype de réservation et gestion de chambres d'hôtel, de gestion et consultation d'événements, de rédaction et lecture d'articles de blog, et de gestion de clientèle.
