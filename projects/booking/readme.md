@@ -10,3 +10,7 @@
 - L'aspect du site doit être professionnel (il est autorisé d'utiliser des templates existants).
 - Le site doit adopter l'architecture MVC et utiliser des gabarits afin que les langages utilisés dans sa conception (HTML, CSS, PHP et SQL) soient strictement séparés.
 - Le site doit être accessible en ligne.
+
+## Arborescence du projet
+Voici une représentation structurelle de l'arborescence du projet :
+![Alt text](structure.png)
