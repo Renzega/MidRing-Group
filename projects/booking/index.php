@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // On initialise la liste des pages accessibles depuis l'URL
 $pages = array('accueil', 'erreur404');

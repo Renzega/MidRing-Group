@@ -1,7 +1,9 @@
 # Booking
+
 **MidRing Agency** a été mandatée pour la conception, le développement et la réalisation d'un projet "prototype" portant sur un système de gestion et réservation de chambres d'hôtel. Ce projet est destiné à un particulier qui ne souhaite pas intégrer de réels systèmes de paiement automatisés, mais simplement un prototype de réservation et gestion de chambres d'hôtel, de gestion et consultation d'événements, de rédaction et lecture d'articles de blog, et de gestion de clientèle. Il nécessite ainsi d'intégrer, à titre d'exemple, un système de sessions permanentes, ou encore de gestion de droits d'utilisateurs.
 
 ## Contraintes de développement
+
 - Le site doit être dynamique et codé en PHP objet. L'utilisation d'un framework PHP de type Symfony ou Zend est interdite car le mélange de code préfabriqué et de code personnel en rend l'évaluation difficle.
 - Le site doit être interfacé avec une base de données MariaDB.
 - Les données de base doivent pouvoir être modifiées en ligne, de manière sécurisée, par des utilisateurs autorisés (session).
@@ -12,6 +14,20 @@
 - Le site doit être accessible en ligne.
 
 ## Arborescence du projet
+
 Voici une représentation structurelle de l'arborescence du projet. Les listes à l'intérieur des rectangles noirs sont, pour la plupart, non-exhaustives :
 
 ![Alt text](structure.png)
+
+## Annexes
+
+- **Skyline Template** : template front-end.
+- **TinyButStrong** : moteur de template PHP permettant d'invoquer les vues. Le code de référence est le suivant :
+```
+require('app/tbs_engine/tbs_class.php'); // On inclut la classe PHP de référence du moteur
+
+$tbs = new clsTinyButStrong(); // On instancie la classe du moteur
+
+$tbs->loadTemplate(TEMPLATES_LOC."/page.php"); // On invoque une vue, où TEMPLATES_LOC = "core/views"
+$tbs->Show(); // On affiche la vue invoquée
+```

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <title>Home 1</title>
+    <title>SkyLine Hotel</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- GOOGLE FONT -->
@@ -46,20 +46,19 @@
 
                         </div>
                         <ul>
-                            <li class="dropdown"><a href="login.html" title="Login" class="dropdown-toggle">LOGIN</a></li>
-                            <li class="dropdown"><a href="register.html" title="Register" class="dropdown-toggle">REGISTER</a></li>
+                            <li class="dropdown" style="background: #fff;"><a href="#" title="Espace client" class="dropdown-toggle" style="color: #000;">Espace client</a></li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">USD <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">EUR <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li class="active"><a href="#">USD</a></li>
-                                    <li><a href="#">EUR</a></li>
+                                    <li class="active" title="Euros"><a href="#">EUR</a></li>
+                                    <li title="Dollars"><a href="#">USD</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">ENG <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">FR <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li class="active"><a href="#">ENG</a></li>
-                                    <li><a href="#">JP</a></li>
+                                    <li class="active" title="Français"><a href="#">FR</a></li>
+                                    <li><a href="#" title="Anglais (États-Unis)">EN</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -80,91 +79,39 @@
                             <span class="icon-bar "></span>
                             <span class="icon-bar "></span>
                         </button>
-                        <a class="navbar-brand" href="index.html" title="Skyline"><img src="images/Home-1/sky-logo-header.png" alt="#"></a>
+                        <a class="navbar-brand" href="index.html" title="Skyline"><img src="core/assets/images/logo_white.png" alt="#"></a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" title="Accueil" style="color: #8E7037;">Accueil</a></li>
+                            <li><a href="#" title="A propos">A propos</a></li>
                             <li class="dropdown ">
-                                <a href="index.html" title="Home" class="dropdown-toggle" data-toggle="dropdown">Home<b class="caret"></b></a>
+                                <a href="#" title="Nos prestations" class="dropdown-toggle" data-toggle="dropdown">Nos prestations<b class="caret"></b></a>
                                 <ul class="dropdown-menu icon-fa-caret-up submenu-hover">
-                                    <li><a href="index.html" title="">Home 1</a></li>
-                                    <li><a href="index_2.html" title="">Home 2</a></li>
-                                    <li><a href="index_3.html" title="">Home 3</a></li>
-                                    <li><a href="index_4.html" title="">Home 4</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown ">
-                                <a href="room_1.html" title="Room & Rate" class="dropdown-toggle" data-toggle="dropdown">Room & Rate<b class="caret"></b></a>
-                                <ul class="dropdown-menu icon-fa-caret-up submenu-hover">
-                                    <li><a href="room_1.html" title="">Room 1</a></li>
-                                    <li><a href="room_2.html" title="">Room 2</a></li>
-                                    <li><a href="room_3.html" title="">Room 3</a></li>
-                                    <li><a href="room_4.html" title="">Room 4</a></li>
-                                    <li><a href="room_5.html" title="">Room 5</a></li>
-                                    <li><a href="room_6.html" title="">Room 6</a></li>
-                                    <li><a href="room_detail.html" title="">Room Detail</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown ">
-                                <a href="#" title="  Page" class="dropdown-toggle" data-toggle="dropdown">Page<b class="caret"></b></a>
-                                <ul class="dropdown-menu icon-fa-caret-up submenu-hover">
-                                    <li><a href="guestbook.html" title="">Guest Book</a></li>
+                                    <li><a href="#" title="Livre d'or">Livre d'or</a></li>
+                                    <li><a href="#" title="Événements">Événements</a></li>
                                     <li class="submenu-hover1">
-                                        <a href="event_page_1.html" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Nos chambres">Hôtel <b class="caret"></b></a>
                                         <ul class="dropdown-menu dropdown-margin">
-                                            <li><a href="event_page_1.html">Events </a></li>
-                                            <li><a href="event_page_2.html">Events Fullwidth</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="attractions.html" title="">Attractions</a></li>
-                                    <li class="submenu-hover1">
-                                        <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                                        <ul class="dropdown-menu dropdown-margin">
-                                            <li><a href="blog.html">Blog </a></li>
-                                            <li><a href="blog_detail.html">Blog Detail</a></li>
+                                            <li><a href="blog.html" title="La carte">Vue d'ensemble </a></li>
+                                            <li><a href="blog_detail.html" title="Chambres simples">Chambres simples</a></li>
+                                            <li><a href="blog_detail.html" title="Chambres doubles">Chambres doubles</a></li>
+                                            <li><a href="blog_detail.html" title="Suites familiales">Suites familiales</a></li>
+                                            <li><a href="blog_detail.html" title="Suites royales">Suites royales</a></li>
+                                            <li><a href="blog_detail.html" title="Appartements">Appartements</a></li>
                                         </ul>
                                     </li>
                                     <li class="submenu-hover1">
-                                        <a href="restaurant_1.html" class="dropdown-toggle" data-toggle="dropdown">Restaurant <b class="caret"></b></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Restaurant">Restaurant <b class="caret"></b></a>
                                         <ul class="dropdown-menu dropdown-margin">
-                                            <li><a href="restaurant_1.html">Restaurant 1</a></li>
-                                            <li><a href="restaurant_2.html">Restaurant 2</a></li>
-                                            <li><a href="restaurant_3.html">Restaurant 3</a></li>
-                                            <li><a href="restaurant_4.html">Restaurant 4</a></li>
+                                            <li><a href="blog.html" title="La carte">La carte </a></li>
+                                            <li><a href="blog_detail.html" title="Réserver une table">Réserver une table</a></li>
                                         </ul>
                                     </li>
-                                    <li class="submenu-hover1">
-                                        <a href="tems_condition_1.html" class="dropdown-toggle" data-toggle="dropdown">Tems Condition  <b class="caret"></b></a>
-                                        <ul class="dropdown-menu dropdown-margin">
-                                            <li><a href="tems_condition_1.html">Tems Condition  1</a></li>
-                                            <li><a href="tems_condition_2.html">Tems Condition  2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="404_page.html" title="">404 Page</a></li>
-                                    <li><a href="comming_soon.html" title="">Comming Soon</a></li>
-                                    <li><a href="check_out.html" title="">Check Out</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown ">
-                                <a href="reservation_1.html" title="Reservation" class="dropdown-toggle" data-toggle="dropdown">RESERVATION<b class="caret"></b></a>
-                                <ul class="dropdown-menu icon-fa-caret-up submenu-hover">
-                                    <li><a href="reservation_1.html" title="">Reservation 1</a></li>
-                                    <li><a href="reservation_2.html" title="">Reservation 2</a></li>
-                                    <li><a href="reservation_3.html" title="">Reservation 3</a></li>
-                                    <li><a href="reservation_4.html" title="">Reservation 4</a></li>
-                                    <li><a href="reservation_5.html" title="">Reservation 5</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown ">
-                                <a href="gallery_1.html" title="Gallery" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
-                                <ul class="dropdown-menu icon-fa-caret-up submenu-hover">
-                                    <li><a href="gallery_1.html" title="">Gallery 1</a></li>
-                                    <li><a href="gallery_2.html" title="">Gallery 2</a></li>
-                                    <li><a href="gallery_3.html" title="">Gallery 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html" title="About">About</a></li>
-                            <li><a href="contact.html" title="Contact">Contact</a></li>
+                            <li><a href="#" title="Galerie">Galerie</a></li>
+                            <li><a href="#" title="Nous contacter">Nous contacter</a></li>
                         </ul>
                     </div>
                 </div>
@@ -179,18 +126,18 @@
     <section class="section-slider height-v">
         <div id="index12" class="owl-carousel  owl-theme">
             <div class="item">
-                <img alt="Third slide" src="core/assets/images/Home-1/Slider-v1.jpg" class="img-responsive">
+                <img alt="Third slide" src="core/assets/images/global/slider-1.jpeg" class="img-responsive">
                 <div class="carousel-caption">
-                    <h1>Welcome to Skyline</h1>
-                    <p><span class="line-t"></span>Hotels & Resorts <span class="line-b"></span></p>
+                    <h1>Bienvenue sur SkyLine Hotel</h1>
+                    <p><span class="line-t"></span>Hotel & Restaurant <span class="line-b"></span></p>
                 </div>
             </div>
             <div class="item">
-                <img alt="Third slide" src="core/assets/images/Home-2/Slider-v2.jpg" class="img-responsive">
+                <img alt="Third slide" src="core/assets/images/global/slider-2.jpg" class="img-responsive">
                 <div class="container">
                     <div class="carousel-caption ">
-                        <h1 class="v2">Enjoy a Luxury  Experience</h1>
-                        <p class="p-v2"><span class="line-t"></span>Hotels & Resorts <span class="line-b"></span></p>
+                        <h1 class="v2">Une expérience de luxe</h1>
+                        <p class="p-v2"><span class="line-t"></span>Au coeur d'Annecy <span class="line-b"></span></p>
                     </div>
                 </div>
             </div>
@@ -198,21 +145,21 @@
         <div class="check-avail">
             <div class="container">
                 <div class="arrival date-title ">
-                    <label>Arrival Date </label>
+                    <label>Date d'arrivée </label>
                     <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy">
                         <input class="form-control" type="text">
                         <span class="input-group-addon"><img src="core/assets/images/Home-1/date-icon.png" alt="#"></span>
                     </div>
                 </div>
                 <div class="departure date-title ">
-                    <label>Departure Date </label>
+                    <label>Date de départ </label>
                     <div id="datepickeri" class="input-group date" data-date-format="dd-mm-yyyy">
                         <input class="form-control" type="text">
                         <span class="input-group-addon"><img src="core/assets/images/Home-1/date-icon.png" alt="#"></span>
                     </div>
                 </div>
                 <div class="adults date-title ">
-                    <label>Adults</label>
+                    <label>Adultes</label>
                     <form>
                         <div class=" carousel-search">
                             <div class="btn-group">
@@ -228,11 +175,11 @@
                     </form>
                 </div>
                 <div class="children date-title ">
-                    <label>Children</label>
+                    <label>Enfants</label>
                     <form>
                         <div class=" carousel-search">
                             <div class="btn-group">
-                                <a class="btn dropdown-toggle " data-toggle="dropdown" href="#">2</a>
+                                <a class="btn dropdown-toggle " data-toggle="dropdown" href="#">0</a>
                                 <ul class="dropdown-menu">
                                     <li><a>1</a></li>
                                     <li><a>2</a></li>
@@ -245,8 +192,8 @@
                 </div>
                 <div class="find_btn date-title">
                     <div class="text-find">
-                        Check
-                        <br>Availability
+                        Vérifier la
+                        <br>disponibilité
                     </div>
                 </div>
             </div>
