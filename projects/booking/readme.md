@@ -22,7 +22,7 @@ Voici une représentation structurelle de l'arborescence du projet. Les listes �
 ## Annexes
 
 - **Skyline Template** : template front-end.
-- **TinyButStrong** : moteur de template PHP permettant d'invoquer les vues. Le code de référence est le suivant :
+- **TinyButStrong** : moteur de template PHP permettant d'invoquer les vues. Le code de référence (le plus souvent placé dans le contrôleur de la page en question) est le suivant :
 ```
 require('app/tbs_engine/tbs_class.php'); // On inclut la classe PHP de référence du moteur
 
