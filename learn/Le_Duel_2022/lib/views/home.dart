@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'authentificate.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}): super(key: key);
@@ -16,10 +15,12 @@ class Home extends StatelessWidget {
         title: const Text('Le Duel 2022', style: TextStyle(fontSize: 25.0)),
         actions: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(right: 10.0),
-            child: GestureDetector(
-              onTap: null,
-              child: const Icon(Icons.person, color: Colors.white)
+            padding: const EdgeInsets.all(0.0),
+            child: IconButton(
+              onPressed: () {
+                Navigator.of(context).push(_showLoginPage());
+              },
+              icon: const Icon(Icons.person, color: Colors.white)
             )
           )
         ],
@@ -47,7 +48,7 @@ class Home extends StatelessWidget {
                         Padding(
                             padding: EdgeInsets.only(top: 2.0, left: 2.0, right: 2.0),
                             child: Text(
-                              'Cliquez sur le bouton de votre candidat et saisissez le nombre de points que vous souhaitez lui attribuer (1 point = 1 euro)',
+                              'Cliquez sur le bouton "Voter" de votre candidat puis saisissez le nombre de points que vous souhaitez lui attribuer (1 point = 1 euro)',
                               style: TextStyle(fontSize: 14.0, fontStyle: FontStyle.italic),
                               textAlign: TextAlign.center,
                             )
@@ -449,6 +450,29 @@ class Home extends StatelessWidget {
           child: Icon(Icons.thumb_up, color: Colors.white),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked
+    );
+  }
+
+  Route _showLoginPage() {
+    return PageRouteBuilder(
+      pageBuilder: (BuildContext context, Animation <double> animation, Animation <double> secondaryAnimation) {
+        return const Authentificate();
+      },
+      transitionsBuilder: (BuildContext context, Animation <double> animation, Animation <double> secondaryAnimation, Widget child) {
+        return SlideTransition(
+          position: Tween<Offset>(
+            begin: const Offset(1.0, 0.0),
+            end: Offset.zero
+          ).animate(animation),
+          child: SlideTransition(
+            position: Tween<Offset>(
+              begin: Offset.zero,
+              end: const Offset(-1.0, 0.0)
+            ).animate(secondaryAnimation),
+            child: child,
+          )
+        );
+      }
     );
   }
 }
