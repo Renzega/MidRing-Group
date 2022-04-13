@@ -6,7 +6,16 @@ class Authentificate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Connexion'))
+      appBar: AppBar(title: const Text('Connexion')),
+      body: GestureDetector(
+        onHorizontalDragEnd: (dragEndDetails) {
+          if(dragEndDetails.primaryVelocity! < 0) {
+            print('mouvement 1');
+          } else if(dragEndDetails.primaryVelocity! > 0) {
+            print('mouvement 2');
+          }
+        },
+      )
     );
   }
 }

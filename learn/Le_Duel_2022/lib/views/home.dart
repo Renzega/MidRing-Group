@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'menu.dart';
 import 'authentificate.dart';
 
 class Home extends StatelessWidget {
@@ -8,9 +9,11 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-          onTap: null,
-          child: const Icon(Icons.menu, color: Colors.white)
+        leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).push(_showMenuPage());
+            },
+            icon: const Icon(Icons.menu, color: Colors.white)
         ),
         title: const Text('Le Duel 2022', style: TextStyle(fontSize: 25.0)),
         actions: <Widget>[
@@ -450,6 +453,29 @@ class Home extends StatelessWidget {
           child: Icon(Icons.thumb_up, color: Colors.white),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked
+    );
+  }
+
+  Route _showMenuPage() {
+    return PageRouteBuilder(
+        pageBuilder: (BuildContext context, Animation <double> animation, Animation <double> secondaryAnimation) {
+          return const Menu();
+        },
+        transitionsBuilder: (BuildContext context, Animation <double> animation, Animation <double> secondaryAnimation, Widget child) {
+          return SlideTransition(
+              position: Tween<Offset>(
+                  begin: const Offset(-1.0, 0.0),
+                  end: Offset.zero
+              ).animate(animation),
+              child: SlideTransition(
+                position: Tween<Offset>(
+                    begin: Offset.zero,
+                    end: const Offset(-1.0, 0.0)
+                ).animate(secondaryAnimation),
+                child: child,
+              )
+          );
+        }
     );
   }
 
