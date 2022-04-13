@@ -72,7 +72,99 @@ class Home extends StatelessWidget {
                       flex: 3,
                       child: Container(
                         color: Colors.black.withOpacity(0.5),
-                        child: null
+                        child: Column(
+                          children: <Widget>[
+                            Flexible(
+                              flex: 2,
+                              child: Container(
+                                alignment: Alignment.center,
+                                    child: const Text('Top Votants', style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold, color: Colors.white))
+                              )
+                            ),
+                            Flexible(
+                              flex: 8,
+                              child: Column(
+                                children: <Widget>[
+                                  Row(
+                                    children: <Widget>[
+                                      Flexible(
+                                        flex: 2,
+                                        child: Container(
+                                          alignment: Alignment.center,
+                                          margin: const EdgeInsets.only(left: 5.0),
+                                          color: Colors.amberAccent,
+                                          child: const Text('1', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                        )
+                                      ),
+                                      Flexible(
+                                        flex: 8,
+                                        child: Container(
+                                          padding: const EdgeInsets.only(left: 5.0),
+                                          child: Column(
+                                            children: const <Widget>[
+                                              Text('LordRenzega', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                              Text('600.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                            ]
+                                          )
+                                        )
+                                      )
+                                    ]
+                                  ),
+                                  Row(
+                                      children: <Widget>[
+                                        Flexible(
+                                            flex: 2,
+                                            child: Container(
+                                                alignment: Alignment.center,
+                                                margin: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                color: Colors.amber,
+                                                child: const Text('2', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                            )
+                                        ),
+                                        Flexible(
+                                            flex: 8,
+                                            child: Container(
+                                                padding: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                child: Column(
+                                                    children: const <Widget>[
+                                                      Text('JohnDoe', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                                      Text('514.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                                    ]
+                                                )
+                                            )
+                                        )
+                                      ]
+                                  ),
+                                  Row(
+                                      children: <Widget>[
+                                        Flexible(
+                                            flex: 2,
+                                            child: Container(
+                                                alignment: Alignment.center,
+                                                margin: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                color: Colors.orange,
+                                                child: const Text('3', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                            )
+                                        ),
+                                        Flexible(
+                                            flex: 8,
+                                            child: Container(
+                                                padding: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                child: Column(
+                                                    children: const <Widget>[
+                                                      Text('Inconnu', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                                      Text('216.47€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                                    ]
+                                                )
+                                            )
+                                        )
+                                      ]
+                                  )
+                                ]
+                              )
+                            )
+                          ]
+                        )
                       )
                     ),
                     Flexible(
@@ -168,7 +260,99 @@ class Home extends StatelessWidget {
                               flex: 3,
                               child: Container(
                                   color: Colors.black.withOpacity(0.5),
-                                  child: null
+                                  child: Column(
+                                      children: <Widget>[
+                                        Flexible(
+                                            flex: 2,
+                                            child: Container(
+                                                alignment: Alignment.center,
+                                                child: const Text('Top Votants', style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold, color: Colors.white))
+                                            )
+                                        ),
+                                        Flexible(
+                                            flex: 8,
+                                            child: Column(
+                                                children: <Widget>[
+                                                  Row(
+                                                      children: <Widget>[
+                                                        Flexible(
+                                                            flex: 2,
+                                                            child: Container(
+                                                                alignment: Alignment.center,
+                                                                margin: const EdgeInsets.only(left: 5.0),
+                                                                color: Colors.amberAccent,
+                                                                child: const Text('1', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                                            )
+                                                        ),
+                                                        Flexible(
+                                                            flex: 8,
+                                                            child: Container(
+                                                                padding: const EdgeInsets.only(left: 5.0),
+                                                                child: Column(
+                                                                    children: const <Widget>[
+                                                                      Text('LordRenzega', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                                                      Text('600.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                                                    ]
+                                                                )
+                                                            )
+                                                        )
+                                                      ]
+                                                  ),
+                                                  Row(
+                                                      children: <Widget>[
+                                                        Flexible(
+                                                            flex: 2,
+                                                            child: Container(
+                                                                alignment: Alignment.center,
+                                                                margin: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                color: Colors.amber,
+                                                                child: const Text('2', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                                            )
+                                                        ),
+                                                        Flexible(
+                                                            flex: 8,
+                                                            child: Container(
+                                                                padding: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                child: Column(
+                                                                    children: const <Widget>[
+                                                                      Text('JohnDoe', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                                                      Text('514.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                                                    ]
+                                                                )
+                                                            )
+                                                        )
+                                                      ]
+                                                  ),
+                                                  Row(
+                                                      children: <Widget>[
+                                                        Flexible(
+                                                            flex: 2,
+                                                            child: Container(
+                                                                alignment: Alignment.center,
+                                                                margin: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                color: Colors.orange,
+                                                                child: const Text('3', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                                            )
+                                                        ),
+                                                        Flexible(
+                                                            flex: 8,
+                                                            child: Container(
+                                                                padding: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                child: Column(
+                                                                    children: const <Widget>[
+                                                                      Text('Inconnu', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                                                      Text('216.47€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                                                    ]
+                                                                )
+                                                            )
+                                                        )
+                                                      ]
+                                                  )
+                                                ]
+                                            )
+                                        )
+                                      ]
+                                  )
                               )
                           ),
                           Flexible(
