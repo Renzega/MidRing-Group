@@ -124,7 +124,6 @@ class BottomMenu extends StatefulWidget {
 
 class _BottomMenuState extends State<BottomMenu> {
   int currentItem = 1;
-  int currentCandidatProgrammes = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -138,14 +137,10 @@ class _BottomMenuState extends State<BottomMenu> {
               child: const Text('Programmes des candidats.es', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0))
             )
           ),
-          const Flexible(
-            flex: 1,
+          Flexible(
+            flex: 9,
             child: ProgrammeCandidat()
-          ),
-          const Flexible(
-              flex: 7,
-              child: ProgrammeCandidatDetail()
-          ),
+          )
         ]
       );
     } else if(currentItem == 2) {
@@ -554,195 +549,214 @@ class ProgrammeCandidat extends StatefulWidget {
 }
 
 class _ProgrammeCandidatState extends State<ProgrammeCandidat> {
-  int currentProgramme = 3;
-
-  @override
-  Widget build(BuildContext context) {
-    if(currentProgramme == 1) {
-      return Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const <Widget>[
-            CircleAvatar(
-                backgroundImage: AssetImage("assets/images/emmanuel_macron_grey.jpg"),
-                radius: 50
-            ),
-            CircleAvatar(
-              backgroundImage: AssetImage("assets/images/marine_le_pen.jpg"),
-              radius: 50
-            )
-          ]
-      );
-    } else if(currentProgramme == 2) {
-      return Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const <Widget>[
-            CircleAvatar(
-                backgroundImage: AssetImage("assets/images/emmanuel_macron.jpg"),
-                radius: 50,
-
-            ),
-            CircleAvatar(
-                backgroundImage: AssetImage("assets/images/marine_le_pen_grey.jpg"),
-                radius: 50
-            )
-          ]
-      );
-    } else {
-      return Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const <Widget>[
-            CircleAvatar(
-              backgroundImage: AssetImage("assets/images/emmanuel_macron.jpg"),
-              radius: 50,
-
-            ),
-            CircleAvatar(
-                backgroundImage: AssetImage("assets/images/marine_le_pen.jpg"),
-                radius: 50
-            )
-          ]
-      );
-    }
-  }
-}
-
-class ProgrammeCandidatDetail extends StatefulWidget {
-  const ProgrammeCandidatDetail({Key? key}) : super(key: key);
-
-  @override
-  State<ProgrammeCandidatDetail> createState() => _ProgrammeCandidatDetailState();
-}
-
-class _ProgrammeCandidatDetailState extends State<ProgrammeCandidatDetail> {
-  int currentProgrammeCandidat = 1;
+  int currentProgrammeCandidat = 3;
 
   @override
   Widget build(BuildContext context) {
     if(currentProgrammeCandidat == 1) {
-      return SingleChildScrollView(
-            child: Column(
-              children: const <Widget>[
-                Padding(
-                    padding: EdgeInsets.only(top: 30.0),
-                    child: Text('Emmanuel Macron', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
-                ),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-              ]
+      return Column(
+        children: <Widget>[
+          Flexible(
+            flex: 1,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: null,
+                    child: const CircleAvatar(
+                        backgroundImage: AssetImage("assets/images/emmanuel_macron_grey.jpg"),
+                        radius: 50
+                    )
+                  ),
+                  GestureDetector(
+                      onTap: updateProgrammeCandidatToSecond,
+                      child: const CircleAvatar(
+                          backgroundImage: AssetImage("assets/images/marine_le_pen.jpg"),
+                          radius: 50
+                      )
+                  )
+                ]
             )
+          ),
+          Flexible(
+            flex: 9,
+            child: SingleChildScrollView(
+                child: Column(
+                    children: const <Widget>[
+                      Padding(
+                          padding: EdgeInsets.only(top: 30.0),
+                          child: Text('Emmanuel Macron', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
+                      ),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                      Text('t1'),
+                    ]
+                )
+            )
+          )
+        ]
       );
     } else if(currentProgrammeCandidat == 2) {
-      return SingleChildScrollView(
-          child: Column(
-              children: const <Widget>[
-                Padding(
-                    padding: EdgeInsets.only(top: 30.0),
-                    child: Text('Marine Le Pen', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
-                ),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-                Text('t1'),
-              ]
-          )
+      return Column(
+          children: <Widget>[
+            Flexible(
+                flex: 1,
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      GestureDetector(
+                          onTap: updateProgrammeCandidatToFirst,
+                          child: const CircleAvatar(
+                              backgroundImage: AssetImage("assets/images/emmanuel_macron.jpg"),
+                              radius: 50
+                          )
+                      ),
+                      GestureDetector(
+                          onTap: null,
+                          child: const CircleAvatar(
+                              backgroundImage: AssetImage("assets/images/marine_le_pen_grey.jpg"),
+                              radius: 50
+                          )
+                      )
+                    ]
+                )
+            ),
+            Flexible(
+                flex: 9,
+                child: SingleChildScrollView(
+                    child: Column(
+                        children: const <Widget>[
+                          Padding(
+                              padding: EdgeInsets.only(top: 30.0),
+                              child: Text('Marine Le Pen', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
+                          ),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                        ]
+                    )
+                )
+            )
+          ]
       );
     } else {
-      return Container(
-        child: null
+      return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            GestureDetector(
+                onTap: updateProgrammeCandidatToFirst,
+                child: const CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/emmanuel_macron.jpg"),
+                    radius: 50
+                )
+            ),
+            GestureDetector(
+                onTap: updateProgrammeCandidatToSecond,
+                child: const CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/marine_le_pen.jpg"),
+                    radius: 50
+                )
+            )
+          ]
       );
     }
   }
 
-  void switchCandidatToFirst() {
-    
+  void updateProgrammeCandidatToFirst() {
+    setState(() {
+      currentProgrammeCandidat = 1;
+    });
   }
 
-  void switchCandidatToSecond() {
-
+  void updateProgrammeCandidatToSecond() {
+    setState(() {
+      currentProgrammeCandidat = 2;
+    });
   }
+
 }
 
