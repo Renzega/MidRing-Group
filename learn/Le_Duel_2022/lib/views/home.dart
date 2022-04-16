@@ -4,67 +4,74 @@ import 'package:flutter/material.dart';
 import 'menu.dart';
 import 'authentificate.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}): super(key: key);
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int currentPage = 2;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).push(_showMenuPage());
-            },
-            icon: const Icon(Icons.menu, color: Colors.white)
-        ),
-        title: const Text('Le Duel 2022', style: TextStyle(fontSize: 25.0)),
-        actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(0.0),
-            child: IconButton(
+        appBar: AppBar(
+          leading: IconButton(
               onPressed: () {
-                Navigator.of(context).push(_showLoginPage());
+                Navigator.of(context).push(_showMenuPage());
               },
-              icon: const Icon(Icons.person, color: Colors.white)
+              icon: const Icon(Icons.menu, color: Colors.white)
+          ),
+          title: const Text('Le Duel 2022', style: TextStyle(fontSize: 25.0)),
+          actions: <Widget>[
+            Padding(
+                padding: const EdgeInsets.all(0.0),
+                child: IconButton(
+                    onPressed: () {
+                      Navigator.of(context).push(_showLoginPage());
+                    },
+                    icon: const Icon(Icons.person, color: Colors.white)
+                )
             )
-          )
-        ],
-        automaticallyImplyLeading: true,
-      ),
-      backgroundColor: Colors.white,
-      body: BottomMenu(),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.red,
-        child: SizedBox(
-          height: 50,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.language,
-                  color: Colors.white
-                ),
-                onPressed: null
-              ),
-              IconButton(
-                  icon: Icon(
-                      Icons.forum,
-                      color: Colors.white
-                  ),
-                  onPressed: null
-              )
-            ],
-          )
+          ],
+          automaticallyImplyLeading: true,
         ),
-        shape: const CircularNotchedRectangle(),
-      ),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: null,
-        backgroundColor: Colors.redAccent,
-          child: Icon(Icons.thumb_up, color: Colors.white),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked
+        backgroundColor: Colors.white,
+        body: BottomMenu(page: currentPage),
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.red,
+          child: SizedBox(
+              height: 50,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  IconButton(
+                      icon: const Icon(
+                          Icons.language,
+                          color: Colors.white
+                      ),
+                      onPressed: setPageToPrograms
+                  ),
+                  IconButton(
+                      icon: const Icon(
+                          Icons.forum,
+                          color: Colors.white
+                      ),
+                      onPressed: setPageToBlog
+                  )
+                ],
+              )
+          ),
+          shape: const CircularNotchedRectangle(),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: setPageToVote,
+          backgroundColor: Colors.redAccent,
+          child: const Icon(Icons.thumb_up, color: Colors.white),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked
     );
   }
 
@@ -93,41 +100,61 @@ class Home extends StatelessWidget {
 
   Route _showLoginPage() {
     return PageRouteBuilder(
-      pageBuilder: (BuildContext context, Animation <double> animation, Animation <double> secondaryAnimation) {
-        return const Authentificate();
-      },
-      transitionsBuilder: (BuildContext context, Animation <double> animation, Animation <double> secondaryAnimation, Widget child) {
-        return SlideTransition(
-          position: Tween<Offset>(
-            begin: const Offset(1.0, 0.0),
-            end: Offset.zero
-          ).animate(animation),
-          child: SlideTransition(
-            position: Tween<Offset>(
-              begin: Offset.zero,
-              end: const Offset(-1.0, 0.0)
-            ).animate(secondaryAnimation),
-            child: child,
-          )
-        );
-      }
+        pageBuilder: (BuildContext context, Animation <double> animation, Animation <double> secondaryAnimation) {
+          return const Authentificate();
+        },
+        transitionsBuilder: (BuildContext context, Animation <double> animation, Animation <double> secondaryAnimation, Widget child) {
+          return SlideTransition(
+              position: Tween<Offset>(
+                  begin: const Offset(1.0, 0.0),
+                  end: Offset.zero
+              ).animate(animation),
+              child: SlideTransition(
+                position: Tween<Offset>(
+                    begin: Offset.zero,
+                    end: const Offset(-1.0, 0.0)
+                ).animate(secondaryAnimation),
+                child: child,
+              )
+          );
+        }
     );
   }
+
+  void setPageToPrograms() {
+    setState(() {
+      currentPage = 1;
+    });
+  }
+
+  void setPageToVote() {
+    setState(() {
+      currentPage = 2;
+    });
+  }
+
+  void setPageToBlog() {
+    setState(() {
+      currentPage = 3;
+    });
+  }
+
 }
 
+
 class BottomMenu extends StatefulWidget {
-  const BottomMenu({Key? key}) : super(key: key);
+  const BottomMenu({Key? key, required this.page}) : super(key: key);
+
+  final int page;
 
   @override
   State<BottomMenu> createState() => _BottomMenuState();
 }
 
 class _BottomMenuState extends State<BottomMenu> {
-  int currentItem = 1;
-
   @override
   Widget build(BuildContext context) {
-    if(currentItem == 1) {
+    if(widget.page == 1) {
       return Column(
         children: <Widget>[
           Flexible(
@@ -137,13 +164,13 @@ class _BottomMenuState extends State<BottomMenu> {
               child: const Text('Programmes des candidats.es', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0))
             )
           ),
-          Flexible(
+          const Flexible(
             flex: 9,
             child: ProgrammeCandidat()
           )
         ]
       );
-    } else if(currentItem == 2) {
+    } else if(widget.page == 2) {
       return SizedBox(
           child: Column(
               children: <Widget>[
