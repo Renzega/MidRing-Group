@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'menu.dart';
 import 'authentificate.dart';
@@ -29,398 +31,8 @@ class Home extends StatelessWidget {
         ],
         automaticallyImplyLeading: true,
       ),
-      backgroundColor: Colors.red,
-      body: SizedBox(
-        child: Column(
-          children: <Widget>[
-            Expanded(
-                flex: 2,
-                child: SizedBox(
-                  child: Container(
-                    color: Colors.white,
-                    child: Column(
-                      children: const <Widget>[
-                        Padding(
-                            padding: EdgeInsets.only(top: 10.0, left: 2.0, right: 2.0),
-                            child: Text(
-                              'Qui sera notre futur.e président.e pour les 5 prochaines années ?',
-                              style: TextStyle(fontFamily: 'Coolvetica', fontSize: 18.0),
-                              textAlign: TextAlign.center,
-                            )
-                        ),
-                        Padding(
-                            padding: EdgeInsets.only(top: 2.0, left: 2.0, right: 2.0),
-                            child: Text(
-                              'Cliquez sur le bouton "Voter" de votre candidat puis saisissez le nombre de points que vous souhaitez lui attribuer (1 point = 1 euro)',
-                              style: TextStyle(fontSize: 14.0, fontStyle: FontStyle.italic),
-                              textAlign: TextAlign.center,
-                            )
-                        ),
-                      ],
-                    )
-                  )
-                )
-            ),
-            Expanded(
-              flex: 4,
-              child: Container(
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/emmanuel_macron.jpg"),
-                    fit: BoxFit.cover
-                  )
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Flexible(
-                      flex: 3,
-                      child: Container(
-                        color: Colors.black.withOpacity(0.5),
-                        child: Column(
-                          children: <Widget>[
-                            Flexible(
-                              flex: 2,
-                              child: Container(
-                                alignment: Alignment.center,
-                                    child: const Text('Top Votants', style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold, color: Colors.white))
-                              )
-                            ),
-                            Flexible(
-                              flex: 8,
-                              child: Column(
-                                children: <Widget>[
-                                  Row(
-                                    children: <Widget>[
-                                      Flexible(
-                                        flex: 2,
-                                        child: Container(
-                                          alignment: Alignment.center,
-                                          margin: const EdgeInsets.only(left: 5.0),
-                                          color: Colors.amberAccent,
-                                          child: const Text('1', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
-                                        )
-                                      ),
-                                      Flexible(
-                                        flex: 8,
-                                        child: Container(
-                                          padding: const EdgeInsets.only(left: 5.0),
-                                          child: Column(
-                                            children: const <Widget>[
-                                              Text('LordRenzega', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
-                                              Text('600.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
-                                            ]
-                                          )
-                                        )
-                                      )
-                                    ]
-                                  ),
-                                  Row(
-                                      children: <Widget>[
-                                        Flexible(
-                                            flex: 2,
-                                            child: Container(
-                                                alignment: Alignment.center,
-                                                margin: const EdgeInsets.only(top: 10.0, left: 5.0),
-                                                color: Colors.amber,
-                                                child: const Text('2', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
-                                            )
-                                        ),
-                                        Flexible(
-                                            flex: 8,
-                                            child: Container(
-                                                padding: const EdgeInsets.only(top: 10.0, left: 5.0),
-                                                child: Column(
-                                                    children: const <Widget>[
-                                                      Text('JohnDoe', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
-                                                      Text('514.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
-                                                    ]
-                                                )
-                                            )
-                                        )
-                                      ]
-                                  ),
-                                  Row(
-                                      children: <Widget>[
-                                        Flexible(
-                                            flex: 2,
-                                            child: Container(
-                                                alignment: Alignment.center,
-                                                margin: const EdgeInsets.only(top: 10.0, left: 5.0),
-                                                color: Colors.orange,
-                                                child: const Text('3', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
-                                            )
-                                        ),
-                                        Flexible(
-                                            flex: 8,
-                                            child: Container(
-                                                padding: const EdgeInsets.only(top: 10.0, left: 5.0),
-                                                child: Column(
-                                                    children: const <Widget>[
-                                                      Text('Inconnu', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
-                                                      Text('216.47€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
-                                                    ]
-                                                )
-                                            )
-                                        )
-                                      ]
-                                  )
-                                ]
-                              )
-                            )
-                          ]
-                        )
-                      )
-                    ),
-                    Flexible(
-                      flex: 7,
-                      child: Row(
-                        children: <Widget>[
-                          Flexible(
-                            flex: 5,
-                            child: Container(
-                              child: null
-                            )
-                          ),
-                          Flexible(
-                            flex: 5,
-                            child: Column(
-                              children: <Widget>[
-                                Flexible(
-                                  flex: 2,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(top: 10.0, right: 10.0),
-                                    child: Container(
-                                      child: Column(
-                                        children: const <Widget>[
-                                          Text('Emmanuel Macron', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 15.0, color: Colors.black)),
-                                          Text('10% (10 euros)', style: TextStyle(fontStyle: FontStyle.italic, fontSize: 14.0, color: Colors.black))
-                                        ]
-                                      ),
-                                      alignment: Alignment.topRight
-                                    )
-                                  )
-                                ),
-                                Flexible(
-                                  flex: 4,
-                                  child: Container(
-                                    child: null
-                                  )
-                                ),
-                                Flexible(
-                                  flex: 2,
-                                  child: Container(
-                                    alignment: Alignment.bottomRight,
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(bottom: 10.0, right: 10.0),
-                                      child: TextButton(
-                                        style: TextButton.styleFrom(backgroundColor: Colors.greenAccent),
-                                        onPressed: null,
-                                        child: const Text('Voter', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 15.0, color: Colors.black))
-                                      )
-                                    )
-                                  )
-                                )
-                              ]
-                            )
-                          )
-                        ]
-                      )
-                    )
-                  ]
-                )
-              )
-            ),
-            Expanded(
-              flex: 1,
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                      flex: 10,
-                      child: Container(
-                          color: Colors.greenAccent
-                      )
-                  ),
-                  Expanded(
-                      flex: 100,
-                      child: Container(
-                          color: Colors.pinkAccent
-                      )
-                  )
-                ]
-              )
-            ),
-            Expanded(
-                flex: 4,
-                child: Container(
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/marine_le_pen.jpg"),
-                            fit: BoxFit.cover
-                        )
-                    ),
-                    child: Row(
-                        children: <Widget>[
-                          Flexible(
-                              flex: 3,
-                              child: Container(
-                                  color: Colors.black.withOpacity(0.5),
-                                  child: Column(
-                                      children: <Widget>[
-                                        Flexible(
-                                            flex: 2,
-                                            child: Container(
-                                                alignment: Alignment.center,
-                                                child: const Text('Top Votants', style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold, color: Colors.white))
-                                            )
-                                        ),
-                                        Flexible(
-                                            flex: 8,
-                                            child: Column(
-                                                children: <Widget>[
-                                                  Row(
-                                                      children: <Widget>[
-                                                        Flexible(
-                                                            flex: 2,
-                                                            child: Container(
-                                                                alignment: Alignment.center,
-                                                                margin: const EdgeInsets.only(left: 5.0),
-                                                                color: Colors.amberAccent,
-                                                                child: const Text('1', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
-                                                            )
-                                                        ),
-                                                        Flexible(
-                                                            flex: 8,
-                                                            child: Container(
-                                                                padding: const EdgeInsets.only(left: 5.0),
-                                                                child: Column(
-                                                                    children: const <Widget>[
-                                                                      Text('LordRenzega', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
-                                                                      Text('600.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
-                                                                    ]
-                                                                )
-                                                            )
-                                                        )
-                                                      ]
-                                                  ),
-                                                  Row(
-                                                      children: <Widget>[
-                                                        Flexible(
-                                                            flex: 2,
-                                                            child: Container(
-                                                                alignment: Alignment.center,
-                                                                margin: const EdgeInsets.only(top: 10.0, left: 5.0),
-                                                                color: Colors.amber,
-                                                                child: const Text('2', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
-                                                            )
-                                                        ),
-                                                        Flexible(
-                                                            flex: 8,
-                                                            child: Container(
-                                                                padding: const EdgeInsets.only(top: 10.0, left: 5.0),
-                                                                child: Column(
-                                                                    children: const <Widget>[
-                                                                      Text('JohnDoe', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
-                                                                      Text('514.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
-                                                                    ]
-                                                                )
-                                                            )
-                                                        )
-                                                      ]
-                                                  ),
-                                                  Row(
-                                                      children: <Widget>[
-                                                        Flexible(
-                                                            flex: 2,
-                                                            child: Container(
-                                                                alignment: Alignment.center,
-                                                                margin: const EdgeInsets.only(top: 10.0, left: 5.0),
-                                                                color: Colors.orange,
-                                                                child: const Text('3', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
-                                                            )
-                                                        ),
-                                                        Flexible(
-                                                            flex: 8,
-                                                            child: Container(
-                                                                padding: const EdgeInsets.only(top: 10.0, left: 5.0),
-                                                                child: Column(
-                                                                    children: const <Widget>[
-                                                                      Text('Inconnu', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
-                                                                      Text('216.47€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
-                                                                    ]
-                                                                )
-                                                            )
-                                                        )
-                                                      ]
-                                                  )
-                                                ]
-                                            )
-                                        )
-                                      ]
-                                  )
-                              )
-                          ),
-                          Flexible(
-                              flex: 7,
-                              child: Row(
-                                  children: <Widget>[
-                                    Flexible(
-                                        flex: 5,
-                                        child: Container(
-                                            child: null
-                                        )
-                                    ),
-                                    Flexible(
-                                        flex: 5,
-                                        child: Column(
-                                            children: <Widget>[
-                                              Flexible(
-                                                  flex: 2,
-                                                  child: Padding(
-                                                      padding: const EdgeInsets.only(top: 10.0, right: 10.0),
-                                                      child: Container(
-                                                          child: Column(
-                                                              children: const <Widget>[
-                                                                Text('Marine Le Pen', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 15.0, color: Colors.white)),
-                                                                Text('90% (90 euros)', style: TextStyle(fontStyle: FontStyle.italic, fontSize: 14.0, color: Colors.white))
-                                                              ]
-                                                          ),
-                                                          alignment: Alignment.topRight
-                                                      )
-                                                  )
-                                              ),
-                                              Flexible(
-                                                  flex: 4,
-                                                  child: Container(
-                                                      child: null
-                                                  )
-                                              ),
-                                              Flexible(
-                                                  flex: 2,
-                                                  child: Container(
-                                                      alignment: Alignment.bottomRight,
-                                                      child: Padding(
-                                                          padding: const EdgeInsets.only(bottom: 10.0, right: 10.0),
-                                                          child: TextButton(
-                                                              style: TextButton.styleFrom(backgroundColor: Colors.pinkAccent),
-                                                              onPressed: null,
-                                                              child: const Text('Voter', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 15.0, color: Colors.black))
-                                                          )
-                                                      )
-                                                  )
-                                              )
-                                            ]
-                                        )
-                                    )
-                                  ]
-                              )
-                          )
-                        ]
-                    )
-                )
-            ),
-          ]
-        )
-      ),
+      backgroundColor: Colors.white,
+      body: BottomMenu(),
       bottomNavigationBar: BottomAppBar(
         color: Colors.red,
         child: SizedBox(
@@ -502,3 +114,635 @@ class Home extends StatelessWidget {
     );
   }
 }
+
+class BottomMenu extends StatefulWidget {
+  const BottomMenu({Key? key}) : super(key: key);
+
+  @override
+  State<BottomMenu> createState() => _BottomMenuState();
+}
+
+class _BottomMenuState extends State<BottomMenu> {
+  int currentItem = 1;
+  int currentCandidatProgrammes = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    if(currentItem == 1) {
+      return Column(
+        children: <Widget>[
+          Flexible(
+            flex: 1,
+            child: Container(
+              alignment: Alignment.center,
+              child: const Text('Programmes des candidats.es', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0))
+            )
+          ),
+          const Flexible(
+            flex: 1,
+            child: ProgrammeCandidat()
+          ),
+          const Flexible(
+              flex: 7,
+              child: ProgrammeCandidatDetail()
+          ),
+        ]
+      );
+    } else if(currentItem == 2) {
+      return SizedBox(
+          child: Column(
+              children: <Widget>[
+                Expanded(
+                    flex: 2,
+                    child: SizedBox(
+                        child: Container(
+                            color: Colors.white,
+                            child: Column(
+                              children: const <Widget>[
+                                Padding(
+                                    padding: EdgeInsets.only(top: 10.0, left: 2.0, right: 2.0),
+                                    child: Text(
+                                      'Qui sera notre futur.e président.e pour les 5 prochaines années ?',
+                                      style: TextStyle(fontFamily: 'Coolvetica', fontSize: 18.0),
+                                      textAlign: TextAlign.center,
+                                    )
+                                ),
+                                Padding(
+                                    padding: EdgeInsets.only(top: 2.0, left: 2.0, right: 2.0),
+                                    child: Text(
+                                      'Cliquez sur le bouton "Voter" de votre candidat puis saisissez le nombre de points que vous souhaitez lui attribuer (1 point = 1 euro)',
+                                      style: TextStyle(fontSize: 14.0, fontStyle: FontStyle.italic),
+                                      textAlign: TextAlign.center,
+                                    )
+                                ),
+                              ],
+                            )
+                        )
+                    )
+                ),
+                Expanded(
+                    flex: 4,
+                    child: Container(
+                        decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/emmanuel_macron.jpg"),
+                                fit: BoxFit.cover
+                            )
+                        ),
+                        child: Row(
+                            children: <Widget>[
+                              Flexible(
+                                  flex: 3,
+                                  child: Container(
+                                      color: Colors.black.withOpacity(0.5),
+                                      child: Column(
+                                          children: <Widget>[
+                                            Flexible(
+                                                flex: 2,
+                                                child: Container(
+                                                    alignment: Alignment.center,
+                                                    child: const Text('Top Votants', style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold, color: Colors.white))
+                                                )
+                                            ),
+                                            Flexible(
+                                                flex: 8,
+                                                child: Column(
+                                                    children: <Widget>[
+                                                      Row(
+                                                          children: <Widget>[
+                                                            Flexible(
+                                                                flex: 2,
+                                                                child: Container(
+                                                                    alignment: Alignment.center,
+                                                                    margin: const EdgeInsets.only(left: 5.0),
+                                                                    color: Colors.amberAccent,
+                                                                    child: const Text('1', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                                                )
+                                                            ),
+                                                            Flexible(
+                                                                flex: 8,
+                                                                child: Container(
+                                                                    padding: const EdgeInsets.only(left: 5.0),
+                                                                    child: Column(
+                                                                        children: const <Widget>[
+                                                                          Text('LordRenzega', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                                                          Text('600.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                                                        ]
+                                                                    )
+                                                                )
+                                                            )
+                                                          ]
+                                                      ),
+                                                      Row(
+                                                          children: <Widget>[
+                                                            Flexible(
+                                                                flex: 2,
+                                                                child: Container(
+                                                                    alignment: Alignment.center,
+                                                                    margin: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                    color: Colors.amber,
+                                                                    child: const Text('2', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                                                )
+                                                            ),
+                                                            Flexible(
+                                                                flex: 8,
+                                                                child: Container(
+                                                                    padding: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                    child: Column(
+                                                                        children: const <Widget>[
+                                                                          Text('JohnDoe', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                                                          Text('514.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                                                        ]
+                                                                    )
+                                                                )
+                                                            )
+                                                          ]
+                                                      ),
+                                                      Row(
+                                                          children: <Widget>[
+                                                            Flexible(
+                                                                flex: 2,
+                                                                child: Container(
+                                                                    alignment: Alignment.center,
+                                                                    margin: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                    color: Colors.orange,
+                                                                    child: const Text('3', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                                                )
+                                                            ),
+                                                            Flexible(
+                                                                flex: 8,
+                                                                child: Container(
+                                                                    padding: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                    child: Column(
+                                                                        children: const <Widget>[
+                                                                          Text('Inconnu', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                                                          Text('216.47€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                                                        ]
+                                                                    )
+                                                                )
+                                                            )
+                                                          ]
+                                                      )
+                                                    ]
+                                                )
+                                            )
+                                          ]
+                                      )
+                                  )
+                              ),
+                              Flexible(
+                                  flex: 7,
+                                  child: Row(
+                                      children: <Widget>[
+                                        Flexible(
+                                            flex: 5,
+                                            child: Container(
+                                                child: null
+                                            )
+                                        ),
+                                        Flexible(
+                                            flex: 5,
+                                            child: Column(
+                                                children: <Widget>[
+                                                  Flexible(
+                                                      flex: 2,
+                                                      child: Padding(
+                                                          padding: const EdgeInsets.only(top: 10.0, right: 10.0),
+                                                          child: Container(
+                                                              child: Column(
+                                                                  children: const <Widget>[
+                                                                    Text('Emmanuel Macron', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 15.0, color: Colors.black)),
+                                                                    Text('10% (10 euros)', style: TextStyle(fontStyle: FontStyle.italic, fontSize: 14.0, color: Colors.black))
+                                                                  ]
+                                                              ),
+                                                              alignment: Alignment.topRight
+                                                          )
+                                                      )
+                                                  ),
+                                                  Flexible(
+                                                      flex: 4,
+                                                      child: Container(
+                                                          child: null
+                                                      )
+                                                  ),
+                                                  Flexible(
+                                                      flex: 2,
+                                                      child: Container(
+                                                          alignment: Alignment.bottomRight,
+                                                          child: Padding(
+                                                              padding: const EdgeInsets.only(bottom: 10.0, right: 10.0),
+                                                              child: TextButton(
+                                                                  style: TextButton.styleFrom(backgroundColor: Colors.greenAccent),
+                                                                  onPressed: null,
+                                                                  child: const Text('Voter', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 15.0, color: Colors.black))
+                                                              )
+                                                          )
+                                                      )
+                                                  )
+                                                ]
+                                            )
+                                        )
+                                      ]
+                                  )
+                              )
+                            ]
+                        )
+                    )
+                ),
+                Expanded(
+                    flex: 1,
+                    child: Row(
+                        children: <Widget>[
+                          Expanded(
+                              flex: 10,
+                              child: Container(
+                                  color: Colors.greenAccent
+                              )
+                          ),
+                          Expanded(
+                              flex: 100,
+                              child: Container(
+                                  color: Colors.pinkAccent
+                              )
+                          )
+                        ]
+                    )
+                ),
+                Expanded(
+                    flex: 4,
+                    child: Container(
+                        decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage("assets/images/marine_le_pen.jpg"),
+                                fit: BoxFit.cover
+                            )
+                        ),
+                        child: Row(
+                            children: <Widget>[
+                              Flexible(
+                                  flex: 3,
+                                  child: Container(
+                                      color: Colors.black.withOpacity(0.5),
+                                      child: Column(
+                                          children: <Widget>[
+                                            Flexible(
+                                                flex: 2,
+                                                child: Container(
+                                                    alignment: Alignment.center,
+                                                    child: const Text('Top Votants', style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold, color: Colors.white))
+                                                )
+                                            ),
+                                            Flexible(
+                                                flex: 8,
+                                                child: Column(
+                                                    children: <Widget>[
+                                                      Row(
+                                                          children: <Widget>[
+                                                            Flexible(
+                                                                flex: 2,
+                                                                child: Container(
+                                                                    alignment: Alignment.center,
+                                                                    margin: const EdgeInsets.only(left: 5.0),
+                                                                    color: Colors.amberAccent,
+                                                                    child: const Text('1', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                                                )
+                                                            ),
+                                                            Flexible(
+                                                                flex: 8,
+                                                                child: Container(
+                                                                    padding: const EdgeInsets.only(left: 5.0),
+                                                                    child: Column(
+                                                                        children: const <Widget>[
+                                                                          Text('LordRenzega', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                                                          Text('600.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                                                        ]
+                                                                    )
+                                                                )
+                                                            )
+                                                          ]
+                                                      ),
+                                                      Row(
+                                                          children: <Widget>[
+                                                            Flexible(
+                                                                flex: 2,
+                                                                child: Container(
+                                                                    alignment: Alignment.center,
+                                                                    margin: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                    color: Colors.amber,
+                                                                    child: const Text('2', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                                                )
+                                                            ),
+                                                            Flexible(
+                                                                flex: 8,
+                                                                child: Container(
+                                                                    padding: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                    child: Column(
+                                                                        children: const <Widget>[
+                                                                          Text('JohnDoe', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                                                          Text('514.00€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                                                        ]
+                                                                    )
+                                                                )
+                                                            )
+                                                          ]
+                                                      ),
+                                                      Row(
+                                                          children: <Widget>[
+                                                            Flexible(
+                                                                flex: 2,
+                                                                child: Container(
+                                                                    alignment: Alignment.center,
+                                                                    margin: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                    color: Colors.orange,
+                                                                    child: const Text('3', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 14.0, fontWeight: FontWeight.bold, color: Colors.black))
+                                                                )
+                                                            ),
+                                                            Flexible(
+                                                                flex: 8,
+                                                                child: Container(
+                                                                    padding: const EdgeInsets.only(top: 10.0, left: 5.0),
+                                                                    child: Column(
+                                                                        children: const <Widget>[
+                                                                          Text('Inconnu', style: TextStyle(fontSize: 13.0, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.white)),
+                                                                          Text('216.47€', style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic, color: Colors.white))
+                                                                        ]
+                                                                    )
+                                                                )
+                                                            )
+                                                          ]
+                                                      )
+                                                    ]
+                                                )
+                                            )
+                                          ]
+                                      )
+                                  )
+                              ),
+                              Flexible(
+                                  flex: 7,
+                                  child: Row(
+                                      children: <Widget>[
+                                        Flexible(
+                                            flex: 5,
+                                            child: Container(
+                                                child: null
+                                            )
+                                        ),
+                                        Flexible(
+                                            flex: 5,
+                                            child: Column(
+                                                children: <Widget>[
+                                                  Flexible(
+                                                      flex: 2,
+                                                      child: Padding(
+                                                          padding: const EdgeInsets.only(top: 10.0, right: 10.0),
+                                                          child: Container(
+                                                              child: Column(
+                                                                  children: const <Widget>[
+                                                                    Text('Marine Le Pen', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 15.0, color: Colors.white)),
+                                                                    Text('90% (90 euros)', style: TextStyle(fontStyle: FontStyle.italic, fontSize: 14.0, color: Colors.white))
+                                                                  ]
+                                                              ),
+                                                              alignment: Alignment.topRight
+                                                          )
+                                                      )
+                                                  ),
+                                                  Flexible(
+                                                      flex: 4,
+                                                      child: Container(
+                                                          child: null
+                                                      )
+                                                  ),
+                                                  Flexible(
+                                                      flex: 2,
+                                                      child: Container(
+                                                          alignment: Alignment.bottomRight,
+                                                          child: Padding(
+                                                              padding: const EdgeInsets.only(bottom: 10.0, right: 10.0),
+                                                              child: TextButton(
+                                                                  style: TextButton.styleFrom(backgroundColor: Colors.pinkAccent),
+                                                                  onPressed: null,
+                                                                  child: const Text('Voter', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 15.0, color: Colors.black))
+                                                              )
+                                                          )
+                                                      )
+                                                  )
+                                                ]
+                                            )
+                                        )
+                                      ]
+                                  )
+                              )
+                            ]
+                        )
+                    )
+                ),
+              ]
+          )
+      );
+    } else {
+      return Text('test 2');
+    }
+  }
+}
+
+class ProgrammeCandidat extends StatefulWidget {
+  const ProgrammeCandidat({Key? key}) : super(key: key);
+
+  @override
+  State<ProgrammeCandidat> createState() => _ProgrammeCandidatState();
+}
+
+class _ProgrammeCandidatState extends State<ProgrammeCandidat> {
+  int currentProgramme = 3;
+
+  @override
+  Widget build(BuildContext context) {
+    if(currentProgramme == 1) {
+      return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const <Widget>[
+            CircleAvatar(
+                backgroundImage: AssetImage("assets/images/emmanuel_macron_grey.jpg"),
+                radius: 50
+            ),
+            CircleAvatar(
+              backgroundImage: AssetImage("assets/images/marine_le_pen.jpg"),
+              radius: 50
+            )
+          ]
+      );
+    } else if(currentProgramme == 2) {
+      return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const <Widget>[
+            CircleAvatar(
+                backgroundImage: AssetImage("assets/images/emmanuel_macron.jpg"),
+                radius: 50,
+
+            ),
+            CircleAvatar(
+                backgroundImage: AssetImage("assets/images/marine_le_pen_grey.jpg"),
+                radius: 50
+            )
+          ]
+      );
+    } else {
+      return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const <Widget>[
+            CircleAvatar(
+              backgroundImage: AssetImage("assets/images/emmanuel_macron.jpg"),
+              radius: 50,
+
+            ),
+            CircleAvatar(
+                backgroundImage: AssetImage("assets/images/marine_le_pen.jpg"),
+                radius: 50
+            )
+          ]
+      );
+    }
+  }
+}
+
+class ProgrammeCandidatDetail extends StatefulWidget {
+  const ProgrammeCandidatDetail({Key? key}) : super(key: key);
+
+  @override
+  State<ProgrammeCandidatDetail> createState() => _ProgrammeCandidatDetailState();
+}
+
+class _ProgrammeCandidatDetailState extends State<ProgrammeCandidatDetail> {
+  int currentProgrammeCandidat = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    if(currentProgrammeCandidat == 1) {
+      return SingleChildScrollView(
+            child: Column(
+              children: const <Widget>[
+                Padding(
+                    padding: EdgeInsets.only(top: 30.0),
+                    child: Text('Emmanuel Macron', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
+                ),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+              ]
+            )
+      );
+    } else if(currentProgrammeCandidat == 2) {
+      return SingleChildScrollView(
+          child: Column(
+              children: const <Widget>[
+                Padding(
+                    padding: EdgeInsets.only(top: 30.0),
+                    child: Text('Marine Le Pen', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
+                ),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+                Text('t1'),
+              ]
+          )
+      );
+    } else {
+      return Container(
+        child: null
+      );
+    }
+  }
+
+  void switchCandidatToFirst() {
+    
+  }
+
+  void switchCandidatToSecond() {
+
+  }
+}
+
