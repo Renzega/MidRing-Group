@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'menu.dart';
 import 'authentificate.dart';
 
@@ -563,7 +562,21 @@ class _BottomMenuState extends State<BottomMenu> {
           )
       );
     } else {
-      return Text('test 2');
+      return Column(
+          children: <Widget>[
+            Flexible(
+                flex: 1,
+                child: Container(
+                    alignment: Alignment.center,
+                    child: const Text('Actualités des candidats.es', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0))
+                )
+            ),
+            const Flexible(
+                flex: 9,
+                child: ActuCandidat()
+            )
+          ]
+      );
     }
   }
 }
@@ -785,5 +798,189 @@ class _ProgrammeCandidatState extends State<ProgrammeCandidat> {
     });
   }
 
+}
+
+class ActuCandidat extends StatefulWidget {
+  const ActuCandidat({Key? key}) : super(key: key);
+
+  @override
+  State<ActuCandidat> createState() => _ActuCandidatState();
+}
+
+class _ActuCandidatState extends State<ActuCandidat> {
+  int currentActuCandidat = 3;
+
+  @override
+  Widget build(BuildContext context) {
+    if(currentActuCandidat == 1) {
+      return Column(
+          children: <Widget>[
+            Flexible(
+                flex: 1,
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      GestureDetector(
+                          onTap: null,
+                          child: const CircleAvatar(
+                              backgroundImage: AssetImage("assets/images/emmanuel_macron_grey.jpg"),
+                              radius: 50
+                          )
+                      ),
+                      GestureDetector(
+                          onTap: updateActuCandidatToSecond,
+                          child: const CircleAvatar(
+                              backgroundImage: AssetImage("assets/images/marine_le_pen.jpg"),
+                              radius: 50
+                          )
+                      )
+                    ]
+                )
+            ),
+            Flexible(
+                flex: 9,
+                child: SingleChildScrollView(
+                    child: Column(
+                        children: <Widget>[
+                          const Padding(
+                              padding: EdgeInsets.only(top: 30.0),
+                              child: Text('Emmanuel Macron', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
+                          ),
+                          YoutubePlayer(
+                            controller: YoutubePlayerController(
+                              initialVideoId: 'dFKhWe2bBkM',
+                              flags: const YoutubePlayerFlags(
+                                autoPlay: false,
+                                mute: false
+                              )
+                            ),
+                            liveUIColor: Colors.amber,
+                            showVideoProgressIndicator: true,
+                          )
+                        ]
+                    )
+                )
+            )
+          ]
+      );
+    } else if(currentActuCandidat == 2) {
+      return Column(
+          children: <Widget>[
+            Flexible(
+                flex: 1,
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      GestureDetector(
+                          onTap: updateActuCandidatToFirst,
+                          child: const CircleAvatar(
+                              backgroundImage: AssetImage("assets/images/emmanuel_macron.jpg"),
+                              radius: 50
+                          )
+                      ),
+                      GestureDetector(
+                          onTap: null,
+                          child: const CircleAvatar(
+                              backgroundImage: AssetImage("assets/images/marine_le_pen_grey.jpg"),
+                              radius: 50
+                          )
+                      )
+                    ]
+                )
+            ),
+            Flexible(
+                flex: 9,
+                child: SingleChildScrollView(
+                    child: Column(
+                        children: const <Widget>[
+                          Padding(
+                              padding: EdgeInsets.only(top: 30.0),
+                              child: Text('Marine Le Pen', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
+                          ),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                          Text('t1'),
+                        ]
+                    )
+                )
+            )
+          ]
+      );
+    } else {
+      return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            GestureDetector(
+                onTap: updateActuCandidatToFirst,
+                child: const CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/emmanuel_macron.jpg"),
+                    radius: 50
+                )
+            ),
+            GestureDetector(
+                onTap: updateActuCandidatToSecond,
+                child: const CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/marine_le_pen.jpg"),
+                    radius: 50
+                )
+            )
+          ]
+      );
+    }
+  }
+
+  void updateActuCandidatToFirst() {
+    setState(() {
+      currentActuCandidat = 1;
+    });
+  }
+
+  void updateActuCandidatToSecond() {
+    setState(() {
+      currentActuCandidat = 2;
+    });
+  }
 }
 
