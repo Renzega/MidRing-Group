@@ -846,16 +846,33 @@ class _ActuCandidatState extends State<ActuCandidat> {
                               padding: EdgeInsets.only(top: 30.0),
                               child: Text('Emmanuel Macron', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
                           ),
-                          YoutubePlayer(
-                            controller: YoutubePlayerController(
-                              initialVideoId: 'dFKhWe2bBkM',
-                              flags: const YoutubePlayerFlags(
-                                autoPlay: false,
-                                mute: false
-                              )
-                            ),
-                            liveUIColor: Colors.amber,
-                            showVideoProgressIndicator: true,
+                          Container(
+                            color: Colors.grey,
+                            margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                            child: Column(
+                              children: <Widget>[
+                                Container(
+                                  padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                  alignment: Alignment.topLeft,
+                                  child: Text('Première vidéo')
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                  alignment: Alignment.topLeft,
+                                  child: YoutubePlayer(
+                                    controller: YoutubePlayerController(
+                                        initialVideoId: 'eGuwUTCqCLk',
+                                        flags: const YoutubePlayerFlags(
+                                            autoPlay: false,
+                                            mute: false
+                                        )
+                                    ),
+                                    liveUIColor: Colors.amber,
+                                    showVideoProgressIndicator: true,
+                                  )
+                                )
+                              ]
+                            )
                           )
                         ]
                     )
