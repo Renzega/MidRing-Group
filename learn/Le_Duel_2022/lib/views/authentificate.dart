@@ -15,60 +15,12 @@ class Authentificate extends StatelessWidget {
           }
         },
         child: Column(
-          children: <Widget>[
+          children: const <Widget>[
             Expanded(
               flex: 1,
               child: Center(
                 child: SingleChildScrollView(
-                  child: Column(
-                      children: <Widget>[
-                        const Icon(Icons.people),
-                        const Text('Connexion', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0)),
-                        const Text('Vous possédez déjà un compte ? Connectez-vous !', style: TextStyle(fontSize: 16.0, fontStyle: FontStyle.italic)),
-                        const Padding(
-                            padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
-                            child: TextField(
-                                decoration: InputDecoration(
-                                  prefixIcon: Icon(Icons.person),
-                                  hintText: 'Nom d\'utilisateur'
-                                )
-                            )
-                        ),
-                        const Padding(
-                            padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                prefixIcon: Icon(Icons.key),
-                                hintText: 'Mot de passe'
-                              ),
-                              enableSuggestions: false,
-                              autocorrect: false,
-                              obscureText: true,
-                            )
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20.0),
-                          child: TextButton(
-                            style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                            onPressed: null,
-                            child: const Text('Connexion', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0, color: Colors.white))
-                          )
-                        ),
-                        Padding(
-                            padding: const EdgeInsets.only(top: 15.0),
-                            child: GestureDetector(
-                              onTap: () {
-                                print('test');
-                              },
-                              child: TextButton(
-                                  style: TextButton.styleFrom(backgroundColor: Colors.blueGrey),
-                                  onPressed: null,
-                                  child: const Text('Pas encore inscrit ?', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0, color: Colors.white))
-                              )
-                            )
-                        )
-                      ]
-                  )
+                  child: Authentification()
                 )
               )
             )
@@ -76,5 +28,149 @@ class Authentificate extends StatelessWidget {
         )
       ),
     );
+  }
+}
+
+class Authentification extends StatefulWidget {
+  const Authentification({Key? key}) : super(key: key);
+
+  @override
+  State<Authentification> createState() => _AuthentificationState();
+}
+
+class _AuthentificationState extends State<Authentification> {
+  int authStep = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    if(authStep == 1) {
+      return Column(
+          children: <Widget>[
+
+            const Icon(Icons.people),
+            const Text('Connexion', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0)),
+            const Text('Vous possédez déjà un compte ? Connectez-vous !', style: TextStyle(fontSize: 16.0, fontStyle: FontStyle.italic)),
+            const Padding(
+                padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
+                child: TextField(
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.person),
+                        hintText: 'Nom d\'utilisateur'
+                    )
+                )
+            ),
+            const Padding(
+                padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.key),
+                      hintText: 'Mot de passe'
+                  ),
+                  enableSuggestions: false,
+                  autocorrect: false,
+                  obscureText: true,
+                )
+            ),
+            Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+                child: TextButton(
+                    style: TextButton.styleFrom(backgroundColor: Colors.blue),
+                    onPressed: null,
+                    child: const Text('Connexion', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0, color: Colors.white))
+                )
+            ),
+            Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: GestureDetector(
+                    onTap: () {
+                      print('test');
+                    },
+                    child: TextButton(
+                        style: TextButton.styleFrom(backgroundColor: Colors.blueGrey),
+                        onPressed: setAuthStepToReg,
+                        child: const Text('Pas encore inscrit ?', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0, color: Colors.white))
+                    )
+                )
+            )
+          ]
+      );
+    } else if(authStep == 2) {
+      return Column(
+          children: <Widget>[
+
+            const Icon(Icons.people),
+            const Text('Inscription', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0)),
+            const Text('Vous souhaitez nous rejoindre ? Inscrivez-vous !', style: TextStyle(fontSize: 16.0, fontStyle: FontStyle.italic)),
+            const Padding(
+                padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
+                child: TextField(
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.person),
+                        hintText: 'Nom d\'utilisateur'
+                    )
+                )
+            ),
+            const Padding(
+                padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.key),
+                      hintText: 'Mot de passe'
+                  ),
+                  enableSuggestions: false,
+                  autocorrect: false,
+                  obscureText: true,
+                )
+            ),
+            const Padding(
+                padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.key),
+                      hintText: 'Répétez votre mot de passe'
+                  ),
+                  enableSuggestions: false,
+                  autocorrect: false,
+                  obscureText: true,
+                )
+            ),
+            Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+                child: TextButton(
+                    style: TextButton.styleFrom(backgroundColor: Colors.blue),
+                    onPressed: null,
+                    child: const Text('Inscription', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0, color: Colors.white))
+                )
+            ),
+            Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: GestureDetector(
+                    onTap: () {
+                      print('test');
+                    },
+                    child: TextButton(
+                        style: TextButton.styleFrom(backgroundColor: Colors.blueGrey),
+                        onPressed: setAuthStepToLog,
+                        child: const Text('Retour à la connexion', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 20.0, color: Colors.white))
+                    )
+                )
+            )
+          ]
+      );
+    } else {
+      return Container(child: null);
+    }
+  }
+
+  void setAuthStepToReg() {
+    setState(() {
+      authStep = 2;
+    });
+  }
+
+  void setAuthStepToLog() {
+    setState(() {
+      authStep = 1;
+    });
   }
 }
