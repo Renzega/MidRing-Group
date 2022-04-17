@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'menu.dart';
 import 'authentificate.dart';
 
@@ -17,13 +16,8 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: IconButton(
-              onPressed: () {
-                Navigator.of(context).push(_showMenuPage());
-              },
-              icon: const Icon(Icons.menu, color: Colors.white)
-          ),
-          title: const Text('Le Duel 2022', style: TextStyle(fontSize: 25.0)),
+          leading: null,
+          title: const Text('Le Duel 2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 25.0)),
           actions: <Widget>[
             Padding(
                 padding: const EdgeInsets.all(0.0),
@@ -35,7 +29,7 @@ class _HomeState extends State<Home> {
                 )
             )
           ],
-          automaticallyImplyLeading: true,
+          automaticallyImplyLeading: false,
         ),
         backgroundColor: Colors.white,
         body: BottomMenu(page: currentPage),
@@ -847,32 +841,124 @@ class _ActuCandidatState extends State<ActuCandidat> {
                               child: Text('Emmanuel Macron', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
                           ),
                           Container(
-                            color: Colors.grey,
+                            color: const Color(0xFFd8d8d8),
                             margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
                             child: Column(
                               children: <Widget>[
                                 Container(
                                   padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
                                   alignment: Alignment.topLeft,
-                                  child: Text('Première vidéo')
+                                  child: const Text('Première actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
                                 ),
                                 Container(
                                   padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
                                   alignment: Alignment.topLeft,
-                                  child: YoutubePlayer(
-                                    controller: YoutubePlayerController(
-                                        initialVideoId: 'eGuwUTCqCLk',
-                                        flags: const YoutubePlayerFlags(
-                                            autoPlay: false,
-                                            mute: false
-                                        )
-                                    ),
-                                    liveUIColor: Colors.amber,
-                                    showVideoProgressIndicator: true,
+                                  child: Container(
+                                    child: const Text('Première actu', style: TextStyle(fontSize: 14.0))
                                   )
                                 )
                               ]
                             )
+                          ),
+                          Container(
+                              color: const Color(0xFFd8d8d8),
+                              margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                              child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: const Text('Deuxième actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
+                                    ),
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                            child: const Text('Deuxième actu', style: TextStyle(fontSize: 14.0))
+                                        )
+                                    )
+                                  ]
+                              )
+                          ),
+                          Container(
+                              color: const Color(0xFFd8d8d8),
+                              margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                              child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: const Text('3e actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
+                                    ),
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                            child: const Text('3e actu', style: TextStyle(fontSize: 14.0))
+                                        )
+                                    )
+                                  ]
+                              )
+                          ),
+                          Container(
+                              color: const Color(0xFFd8d8d8),
+                              margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                              child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: const Text('4e actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
+                                    ),
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                            child: const Text('4e actu', style: TextStyle(fontSize: 14.0))
+                                        )
+                                    )
+                                  ]
+                              )
+                          ),
+                          Container(
+                              color: const Color(0xFFd8d8d8),
+                              margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                              child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: const Text('5e actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
+                                    ),
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                            child: const Text('5e actu', style: TextStyle(fontSize: 14.0))
+                                        )
+                                    )
+                                  ]
+                              )
+                          ),
+                          Container(
+                              color: const Color(0xFFd8d8d8),
+                              margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                              child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: const Text('6e actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
+                                    ),
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                            child: const Text('6e actu', style: TextStyle(fontSize: 14.0))
+                                        )
+                                    )
+                                  ]
+                              )
                           )
                         ]
                     )
@@ -909,56 +995,131 @@ class _ActuCandidatState extends State<ActuCandidat> {
                 flex: 9,
                 child: SingleChildScrollView(
                     child: Column(
-                        children: const <Widget>[
-                          Padding(
+                        children: <Widget>[
+                          const Padding(
                               padding: EdgeInsets.only(top: 30.0),
                               child: Text('Marine Le Pen', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
                           ),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
-                          Text('t1'),
+                          Container(
+                              color: const Color(0xFFd8d8d8),
+                              margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                              child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: const Text('Première actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
+                                    ),
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                            child: const Text('Première actu', style: TextStyle(fontSize: 14.0))
+                                        )
+                                    )
+                                  ]
+                              )
+                          ),
+                          Container(
+                              color: const Color(0xFFd8d8d8),
+                              margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                              child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: const Text('Deuxième actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
+                                    ),
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                            child: const Text('Deuxième actu', style: TextStyle(fontSize: 14.0))
+                                        )
+                                    )
+                                  ]
+                              )
+                          ),
+                          Container(
+                              color: const Color(0xFFd8d8d8),
+                              margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                              child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: const Text('3e actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
+                                    ),
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                            child: const Text('3e actu', style: TextStyle(fontSize: 14.0))
+                                        )
+                                    )
+                                  ]
+                              )
+                          ),
+                          Container(
+                              color: const Color(0xFFd8d8d8),
+                              margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                              child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: const Text('4e actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
+                                    ),
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                            child: const Text('4e actu', style: TextStyle(fontSize: 14.0))
+                                        )
+                                    )
+                                  ]
+                              )
+                          ),
+                          Container(
+                              color: const Color(0xFFd8d8d8),
+                              margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                              child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: const Text('5e actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
+                                    ),
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                            child: const Text('5e actu', style: TextStyle(fontSize: 14.0))
+                                        )
+                                    )
+                                  ]
+                              )
+                          ),
+                          Container(
+                              color: const Color(0xFFd8d8d8),
+                              margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                              child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: const Text('6e actu - Le 17/04/2022', style: TextStyle(fontFamily: 'Coolvetica', fontSize: 16.0))
+                                    ),
+                                    Container(
+                                        padding: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                            child: const Text('6e actu', style: TextStyle(fontSize: 14.0))
+                                        )
+                                    )
+                                  ]
+                              )
+                          )
                         ]
                     )
                 )
